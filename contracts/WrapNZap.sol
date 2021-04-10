@@ -18,6 +18,9 @@ contract WrapNZap {
         wrapper.deposit{value: msg.value}();
 
         // send to zappee
-        require(wrapper.transfer(zappee, msg.value), "transfer failed");
+        require(
+            wrapper.transfer(zappee, msg.value),
+            "WrapNZap: transfer failed"
+        );
     }
 }

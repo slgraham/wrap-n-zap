@@ -5,9 +5,10 @@ pragma solidity ^0.8.1;
 import "./WrapNZap.sol";
 
 contract WrapNZapFactory {
-    event NewWrapNZap(address zappee, address wrapper);
+    event NewWrapNZap(address zappee, address wrapper, address WrapNZap);
 
     WrapNZap[] public wrapnzaps;
+    uint256 public wrapnzapCount;
 
     function create(address _zappee, address _wrapper) external {
         require(
@@ -16,7 +17,8 @@ contract WrapNZapFactory {
         );
         WrapNZap wrapnzap = new WrapNZap(_zappee, _wrapper);
         wrapnzaps.push(wrapnzap);
-        emit NewWrapNZap(_zappee, _wrapper);
+        wrapnzapCount += 1;
+        emit NewWrapNZap(_zappee, _wrapper, address(wrapnzap));
     }
 
     function createAndZap(address _zappee, address _wrapper) external payable {
@@ -26,6 +28,7 @@ contract WrapNZapFactory {
         );
         WrapNZap wrapnzap = (new WrapNZap){value: msg.value}(_zappee, _wrapper);
         wrapnzaps.push(wrapnzap);
-        emit NewWrapNZap(_zappee, _wrapper);
+        wrapnzapCount += 1;
+        emit NewWrapNZap(_zappee, _wrapper, address(wrapnzap));
     }
 }
