@@ -11,16 +11,20 @@ contract WrapNZap {
     constructor(address _zappee, address _wrapper) payable {
         zappee = _zappee;
         wrapper = IWrappedETH(_wrapper);
+        if (msg.value > 0) {
+            _zap(msg.value);
+        }
+    }
+
+    function _zap(uint256 value) internal {
+        // wrap
+        wrapper.deposit{value: value}();
+
+        // send to zappee
+        require(wrapper.transfer(zappee, value), "WrapNZap: transfer failed");
     }
 
     receive() external payable {
-        // wrap
-        wrapper.deposit{value: msg.value}();
-
-        // send to zappee
-        require(
-            wrapper.transfer(zappee, msg.value),
-            "WrapNZap: transfer failed"
-        );
+        _zap(msg.value);
     }
 }
