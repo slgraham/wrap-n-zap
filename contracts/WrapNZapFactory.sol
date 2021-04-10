@@ -26,6 +26,7 @@ contract WrapNZapFactory {
             _zappee != address(0) && _wrapper != address(0),
             "not real address"
         );
+        require(msg.value > 0, "no value sent");
         WrapNZap wrapnzap = (new WrapNZap){value: msg.value}(_zappee, _wrapper);
         wrapnzaps.push(wrapnzap);
         wrapnzapCount += 1;
