@@ -6,7 +6,9 @@
   "author": "spengrah <code@spengrah.xyz>",
   "license": "MIT",
   "dependencies": {
-    "hardhat": "^2.1.2"
+    "dotenv": "^8.2.0",
+    "hardhat": "^2.1.2",
+    "hardhat-ethers": "^1.0.1"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",
