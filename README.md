@@ -18,7 +18,7 @@ For example, consider a user trying to send DAI to a Moloch DAO on the xDAI netw
 
 WrapNZap simplifies this process into a single step.
 
-1. Use the xDAI [OmniBridge](https://omni.xdaichain.com/bridge) and specify the DAO's WrapNZap contract as the receipient. The WrapNZap contract handles the wrapping and the zapping to the DAO.
+1. Use the [xDAI bridge](https://bridge.xdaichain.com/) and specify the DAO's WrapNZap contract as the receipient. The WrapNZap contract handles the wrapping and the zapping to the DAO.
 
 ## How it works
 
