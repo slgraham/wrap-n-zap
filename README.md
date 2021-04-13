@@ -41,9 +41,9 @@ Note: they will also need to set the `wrapper`.
 
 ### xDAI Network
 
-WrapNZap Factory: [0x5FC8d32690cc91D4c39d9d3abcBD16989F875707](https://blockscout.com/poa/xdai/address/0x5FC8d32690cc91D4c39d9d3abcBD16989F875707/contracts)
+WrapNZap Factory: [0x8464135c8F25Da09e49BC8782676a84730C318bC](https://blockscout.com/poa/xdai/address/0x8464135c8F25Da09e49BC8782676a84730C318bC/contracts)
 
-Raid Guild WrapNZap: [0x61c36a8d610163660e21a8b7359e1cac0c9133e1](https://blockscout.com/poa/xdai/address/0x61c36a8d610163660E21a8b7359e1Cac0C9133e1/contracts)
+Raid Guild WrapNZap: [0x8398bCD4f633C72939F9043dB78c574A91C99c0A](https://blockscout.com/poa/xdai/address/0x8398bCD4f633C72939F9043dB78c574A91C99c0A/contracts)
 
 ## Running Tests
 
