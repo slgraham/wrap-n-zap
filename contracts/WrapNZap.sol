@@ -16,6 +16,13 @@ contract WrapNZap {
         }
     }
 
+    function poke() public {
+        uint256 balance = address(this).balance;
+        require(balance > 0, "WrapNZap: no balance");
+
+        _zap(balance);
+    }
+
     function _zap(uint256 value) internal {
         // wrap
         wrapper.deposit{value: value}();
