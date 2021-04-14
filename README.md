@@ -31,6 +31,12 @@ WrapNZap leverages solidity's `receive()` capability to trigger activity when th
 
 When this happens, the native coins are first sent to the `wrapper` to be wrapped into an ERC20 token, and then the resulting tokens are transferred to the `zappee`.
 
+### The need for poke
+
+On the xDAI network, the xDAI bridge doesn't send an xDAI transaction when new DAI is bridged over from mainnet. Instead, it assigns the xDAI to the recipient via the coinbase/block reward, which does not trigger a contract's `receive()` or fallback function. Unfortunately, that breaks the end to end automation awesomeness of WrapNZap.
+
+We can, however, get around this problem with a public `poke` function that triggers the contract's balance to be wrapped and zapped. It of course requires an additional transaction, but it need not be the original sender.
+
 ## WrapNZap Factory
 
 This repo also includes a factory contract that simplifies the process for DAOs to deploy a WrapNZap contract of their own. A DAO -- or anybody working on behalf of the DAO -- can create a new WrapNZap instance with the DAO as the `zappee`.
