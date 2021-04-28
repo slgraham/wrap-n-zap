@@ -1,27 +1,22 @@
-const { ethers } = require('hardhat');
+const hre = require('hardhat');
+const ethernal = require('hardhat-ethernal');
 
 const networkName = {
-	42: 'Kovan',
-	4: 'Rinkeby',
+	42: 'kovan',
+	4: 'rinkeby',
 	100: 'xDai',
+	137: 'polygon',
 };
 
 const networkCurrency = {
 	42: 'ETH',
 	4: 'ETH',
 	100: 'xDai',
+	137: 'MATIC',
 };
 
-// async function main() {
-// 	// We get the contract to deploy
-// 	const WrapNZapFactory = await ethers.getContractFactory('WrapNZapFactory');
-// 	const wrapNZapFactory = await WrapNZapFactory.deploy();
-
-// 	console.log('WrapNZapFactory deployed to:', wrapNZapFactory.address);
-// }
-
 async function main() {
-	const [deployer] = await ethers.getSigners();
+	const [deployer] = await hre.ethers.getSigners();
 	const address = await deployer.getAddress();
 	const { chainId } = await deployer.provider.getNetwork();
 	console.log('Deploying WrapNZapFactory on network:', networkName[chainId]);
@@ -42,6 +37,13 @@ async function main() {
 	console.log('Transaction Hash:', txHash);
 	console.log('Contract Address:', wrapNZapFactory.address);
 	console.log('Block Number:', receipt.blockNumber);
+
+	if (chainId == 1337) {
+		await hre.ethernal.push({
+			name: 'WrapNZapFactory',
+			address: wrapNZapFactory.address,
+		});
+	}
 }
 
 main()

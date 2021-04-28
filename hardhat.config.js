@@ -1,8 +1,10 @@
 require('dotenv').config();
 require('@nomiclabs/hardhat-waffle');
 require('@nomiclabs/hardhat-ethers');
+require('@nomiclabs/hardhat-etherscan');
+require('hardhat-ethernal');
 
-const { PRIVATE_KEY } = process.env;
+const { ETHERSCAN_API_KEY, INFURA_PROJECT_ID, SEED } = process.env;
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -34,11 +36,45 @@ module.exports = {
 		localhost: {
 			url: 'http://127.0.0.1:8545',
 		},
-		hardhat: {},
+		hardhat: {
+			accounts: {
+				mnemonic: SEED,
+			},
+			chainId: 1337,
+		},
 		xdai: {
 			url: 'https://xdai.1hive.org/',
-			accounts: [`0x${PRIVATE_KEY}`],
-			gasPrice: 1000000000,
+			accounts: {
+				mnemonic: SEED,
+				count: 1,
+				gasPrice: 1000000000,
+			},
 		},
+		rinkeby: {
+			url: `https://rinkeby.infura.io/v3/${INFURA_PROJECT_ID}`,
+			accounts: {
+				mnemonic: SEED,
+				count: 1,
+			},
+		},
+		kovan: {
+			url: `https://kovan.infura.io/v3/${INFURA_PROJECT_ID}`,
+			accounts: {
+				mnemonic: SEED,
+				count: 1,
+			},
+		},
+		polygon: {
+			url: 'https://rpc-mainnet.matic.network',
+			chainId: 137,
+			accounts: {
+				mnemonic: SEED,
+				count: 1,
+				gasPrice: 1000000000,
+			},
+		},
+	},
+	etherscan: {
+		apiKey: ETHERSCAN_API_KEY,
 	},
 };
