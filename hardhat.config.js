@@ -49,6 +49,7 @@ module.exports = {
 				count: 1,
 				gasPrice: 1000000000,
 			},
+			gasPrice: 1000000000,
 		},
 		rinkeby: {
 			url: `https://rinkeby.infura.io/v3/${INFURA_PROJECT_ID}`,
@@ -70,9 +71,19 @@ module.exports = {
 			accounts: {
 				mnemonic: SEED,
 				count: 1,
-				gasPrice: 1000000000,
+				
 			},
+			gasPrice: 1000000000,
 		},
+
+		mainnet: {
+			url: `https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}`,
+			accounts: {
+				mnemonic: SEED,
+				count: 1,
+			},
+			gasPrice: 15000000000
+		}
 	},
 	etherscan: {
 		apiKey: ETHERSCAN_API_KEY,

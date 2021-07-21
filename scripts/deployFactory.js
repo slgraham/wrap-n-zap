@@ -2,6 +2,7 @@ const hre = require('hardhat');
 const ethernal = require('hardhat-ethernal');
 
 const networkName = {
+	1: 'mainnet',
 	42: 'kovan',
 	4: 'rinkeby',
 	100: 'xDai',
@@ -9,6 +10,7 @@ const networkName = {
 };
 
 const networkCurrency = {
+	1: 'ETH',
 	42: 'ETH',
 	4: 'ETH',
 	100: 'xDai',

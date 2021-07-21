@@ -45,6 +45,10 @@ Note: they will also need to set the `wrapper`.
 
 ## Current Deployments
 
+### Mainnet
+
+- WrapNZap Factory: [0x4e521FF388c83b4c945a33984ba42Efb73Cc04e6](https://etherscan.io/address/0x4e521FF388c83b4c945a33984ba42Efb73Cc04e6)
+
 ### xDAI Network
 
 -   WrapNZap Factory: [0x8464135c8F25Da09e49BC8782676a84730C318bC](https://blockscout.com/poa/xdai/address/0x8464135c8F25Da09e49BC8782676a84730C318bC/contracts)
