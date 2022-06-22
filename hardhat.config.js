@@ -76,7 +76,7 @@ module.exports = {
 			gasPrice: 1000000000,
 		},
     goerli: {
-      url: `https://goerli.infura.io/v3/${INFURA_PROJECT_ID}`,
+      url: `https://rpc.goerli.mudit.blog/`,
       accounts: {
 				mnemonic: SEED,
 				count: 1,
