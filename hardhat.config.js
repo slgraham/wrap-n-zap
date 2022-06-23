@@ -51,20 +51,6 @@ module.exports = {
 			},
 			gasPrice: 1000000000,
 		},
-		rinkeby: {
-			url: `https://rinkeby.infura.io/v3/${INFURA_PROJECT_ID}`,
-			accounts: {
-				mnemonic: SEED,
-				count: 1,
-			},
-		},
-		kovan: {
-			url: `https://kovan.infura.io/v3/${INFURA_PROJECT_ID}`,
-			accounts: {
-				mnemonic: SEED,
-				count: 1,
-			},
-		},
 		polygon: {
 			url: 'https://rpc-mainnet.matic.network',
 			chainId: 137,
