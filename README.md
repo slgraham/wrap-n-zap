@@ -55,14 +55,6 @@ Note: they will also need to set the `wrapper`.
 
 -   Raid Guild WrapNZap: [0x8398bCD4f633C72939F9043dB78c574A91C99c0A](https://blockscout.com/poa/xdai/address/0x8398bCD4f633C72939F9043dB78c574A91C99c0A/contracts)
 
-### Rinkeby
-
--   WrapNZap Factory: [0x4e521FF388c83b4c945a33984ba42Efb73Cc04e6](https://rinkeby.etherscan.io/address/0x4e521FF388c83b4c945a33984ba42Efb73Cc04e6)
-
-### Kovan
-
--   WrapNZap Factory: [0xbf9e327d465A4A160fA7805282Fb8C7aB892770a](https://kovan.etherscan.io/address/0xbf9e327d465A4A160fA7805282Fb8C7aB892770a)
-
 ### Polygon
 
 -   WrapNZap Factory: [0xbf9e327d465A4A160fA7805282Fb8C7aB892770a](https://explorer-mainnet.maticvigil.com/address/0xbf9e327d465A4A160fA7805282Fb8C7aB892770a/)
