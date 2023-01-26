@@ -6,7 +6,7 @@ A simple zap contract to wrap a native token and send it to a destination.
 
 Some contracts -- such as Moloch DAOs -- cannot receive or deal with native coins such as ETH (on mainnet) or xDAI (on xDAI network). To be sent to such contracts, native coins must first be wrapped into ERC20 tokens. This creates a UX challenge for users trying to get coins into those contracts from other networks.
 
-For example, consider a user trying to send DAI to a Moloch DAO on the xDAI network. Currently, they must do the following:
+For example, consider a user trying to send DAI to a Moloch DAO on the xDAI network. Currently, they must do the following.
 
 ### Current Process (before WrapNZap)
 
