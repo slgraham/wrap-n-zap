@@ -71,6 +71,6 @@ Note: they will also need to set the `wrapper`.
 
 WrapNZap uses Hardhat, Waffle, and ethers. Here's how to test:
 
-1. Clone this repo -- `git clone https://github.com/slgraham/wrap-n-zap.git`
+1. Clone this repo -- `git clone https://github.com/spengrah/wrap-n-zap.git`
 2. Install hardhat and dependencies -- `yarn install`
 3. Run tests -- `yarn hardhat test`
